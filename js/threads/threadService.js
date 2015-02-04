@@ -8,7 +8,11 @@ this.getThreads = function (){
 };
 
 this.getThread = function(threadId) {
-	return $firebase(new Firebase(firebaseUrl + '/threads/' + threadId))
+	return $firebase(new Firebase(firebaseUrl + '/threads/' + threadId));
+}
+
+this.getComments = function(threadId) {
+	return $firebase(new Firebase(firebaseUrl + '/threads/' + threadId + '/comments'));
 }
 
 })
